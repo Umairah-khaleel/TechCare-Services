@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/nav_home" />
+
+    <item
+        android:id="@+id/nav_browse_services"
+        android:title="@string/btn_browse_services" />
+
+    <item
+        android:id="@+id/nav_booking_history"
+        android:title="@string/nav_my_bookings" />
+
+    <item
+        android:id="@+id/nav_admin_notices"
+        android:title="@string/nav_admin_notices" />
+
+    <item
+        android:id="@+id/nav_support_tips"
+        android:title="@string/title_support_tips" />
+
+    <item
+        android:id="@+id/nav_edit_profile"
+        android:title="@string/nav_edit_profile" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="@string/nav_logout" />
+
+</menu>

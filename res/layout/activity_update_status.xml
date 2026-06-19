@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5F5">
+
+    <RelativeLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back"
+            android:contentDescription="@string/back_button_desc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_update_status"
+            android:textColor="#4A148C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/lblCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_customer_name"
+                android:textColor="#4A148C"
+                android:textStyle="bold"
+                android:labelFor="@+id/etUpdateName"/>
+            <EditText
+                android:id="@+id/etUpdateName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:background="#E0E0E0"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="textPersonName"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/lblDeviceModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_device_model"
+                android:textColor="#4A148C"
+                android:textStyle="bold"
+                android:labelFor="@+id/etUpdateModel"/>
+            <EditText
+                android:id="@+id/etUpdateModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:background="#E0E0E0"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="text"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/lblProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_problem"
+                android:textColor="#4A148C"
+                android:textStyle="bold"
+                android:labelFor="@+id/etUpdateProblem"/>
+            <EditText
+                android:id="@+id/etUpdateProblem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:background="#E0E0E0"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="textMultiLine"
+                android:textColor="#000000"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#4A148C" android:layout_marginVertical="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_update_status"
+                android:textColor="#4A148C"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:entries="@array/booking_status_options"/>
+
+            <Button
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#4A148C"
+                android:text="@string/btn_save_changes"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/updateLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="#4A148C"/>
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/logo_desc" />
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Full Name Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/full_name"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+
+        <!-- Full Name Input -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_full_name"
+            android:inputType="textPersonName"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Email Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Password Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+
+        <!-- Password Input with Show/Hide -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext"
+            android:padding="0dp"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:padding="12dp"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/tvShowHidePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/show_password"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textColor="#7B1FA2"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Confirm Password Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_password"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+
+        <!-- Confirm Password Input with Show/Hide -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext"
+            android:padding="0dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/hint_confirm_password"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:padding="12dp"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/tvShowHideConfirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/show_password"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textColor="#7B1FA2"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/signup_text"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#7B1FA2"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Login Redirect -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_login"
+            android:textColor="#7B1FA2"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="8dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

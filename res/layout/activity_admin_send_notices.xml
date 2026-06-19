@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5F5">
+
+    <LinearLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back"
+            android:contentDescription="@string/back_button_desc" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_send_notice"
+            android:textColor="#4A148C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_history"
+            android:textSize="12sp"
+            android:backgroundTint="#4A148C"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvLabelSendTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_send_to"
+                android:textColor="#4A148C"
+                android:textStyle="bold"
+                android:labelFor="@+id/spinnerTargetType"/>
+
+            <Spinner
+                android:id="@+id/spinnerTargetType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:entries="@array/target_options"/>
+
+            <LinearLayout
+                android:id="@+id/layoutIndividualUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvLabelSelectCust"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_select_customer"
+                    android:textColor="#4A148C"
+                    android:textStyle="bold"
+                    android:labelFor="@+id/spinnerUserList"/>
+
+                <Spinner
+                    android:id="@+id/spinnerUserList"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMessageFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvLabelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_notice_title"
+                    android:textColor="#4A148C"
+                    android:textStyle="bold"
+                    android:labelFor="@+id/etNoticeTitle"/>
+
+                <EditText
+                    android:id="@+id/etNoticeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_notice_title"
+                    android:padding="12dp"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="15dp"
+                    android:inputType="textCapSentences"
+                    android:importantForAccessibility="no"/>
+
+                <TextView
+                    android:id="@+id/tvLabelMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_notice_message"
+                    android:textColor="#4A148C"
+                    android:textStyle="bold"
+                    android:labelFor="@+id/etNoticeMessage"/>
+
+                <EditText
+                    android:id="@+id/etNoticeMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:hint="@string/hint_notice_message"
+                    android:gravity="top"
+                    android:padding="12dp"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="20dp"
+                    android:inputType="textMultiLine"
+                    android:importantForAccessibility="no"/>
+
+                <Button
+                    android:id="@+id/btnPostNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_post_notice"
+                    android:backgroundTint="#4A148C"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/noticeLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
