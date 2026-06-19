@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "781755443586",
+    "project_id": "techcareservices-3f423",
+    "storage_bucket": "techcareservices-3f423.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781755443586:android:3861cf6a28b5183915479b",
+        "android_client_info": {
+          "package_name": "com.example.TechCareServices"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_RAf-D-GUSvcPFSJjzkS0gNykXr35eC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
